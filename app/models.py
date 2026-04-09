@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, Date, Numeric
-from database import Base
+from app.database import Base
 
 class Estado(Base):
     __tablename__ = "tb_estados"
@@ -32,4 +32,4 @@ class Curso(Base):
     cod_curso = Column(Integer, primary_key=True, index=True)
     nome_curso = Column(String(100), nullable=False)
     carga_horaria_curso = Column(Integer, nullable=False)
-    preco_curso = Column(Numeric(10,2), nullable=False) # Lida fortemente com controle em limites contábeis em centavos fixos
+    preco_curso = Column(Numeric(10,2), nullable=False)
