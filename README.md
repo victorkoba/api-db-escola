@@ -31,9 +31,9 @@ A documentação interativa está disponível em:
 - ReDoc: http://SEU_IP:8000/redoc
 
 > Observação: a porta pode variar dependendo da configuração do servidor.
-### Swagger UI
+## Swagger UI
 <img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/49d997e2-7459-454b-b5b2-93487116b003" />
-### Redoc
+## Redoc
 <img width="1920" height="968" alt="image" src="https://github.com/user-attachments/assets/09f7d987-92a3-485c-b77d-d0a6109a9fbe" />
 
 ## Como rodar o projeto
