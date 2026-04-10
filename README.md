@@ -1,6 +1,6 @@
 # API BD Escola
 
-API REST desenvolvida com FastAPI para gerenciamento de dados escolares.
+API de gerenciamento escolar desenvolvida com FastAPI e SQLAlchemy, provisionada em ambiente AWS para demonstração de habilidades em desenvolvimento backend e infraestrutura em nuvem.
 
 ---
 
@@ -25,7 +25,7 @@ API REST desenvolvida com FastAPI para gerenciamento de dados escolares.
 
 ## Documentação da API
 
-A documentação interativa está disponível em:
+A API segue o padrão OpenAPI, gerando documentação automática que facilita o consumo dos endpoints e testes em tempo real.
 
 - Swagger UI: http://SEU_IP:8000/docs
 - ReDoc: http://SEU_IP:8000/redoc
@@ -38,65 +38,16 @@ A documentação interativa está disponível em:
 ## Redoc
 <img width="1920" height="968" alt="image" src="https://github.com/user-attachments/assets/09f7d987-92a3-485c-b77d-d0a6109a9fbe" />
 
-## Como rodar o projeto
-
-### 1. Clone o repositório
-
-```
-git clone https://github.com/victorkoba/api-db-escola.git
-cd api-db-escola
-```
-
----
-
-### 2. Crie e ative o ambiente virtual
-
-```
-python3 -m venv venv
-source venv/bin/activate
-```
-
----
-
-### 3. Instale as dependências
-
-```
-pip install -r requirements.txt
-```
-
----
-
-### 4. Configure as variáveis de ambiente
-
-Crie um arquivo `.env`:
-
-```
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=nome_do_banco
-```
-
----
-
-### 5. Execute a API
-
-```
-python -m uvicorn app.main:app --reload
-```
-
----
-
-## Deploy na AWS (EC2)
-
-A aplicação foi implantada em uma instância EC2 utilizando Uvicorn como servidor ASGI.
+### Ambiente de Desenvolvimento
+<img width="1920" height="962" alt="image" src="https://github.com/user-attachments/assets/293443b9-2374-4dfc-a7d5-890b8832716a" />
 
 ### Configuração de rede
 
-No Security Group da instância, foi liberada a porta:
+No Security Group da instância, foram configuradas as regras de entrada:
 
-- 8000 (API FastAPI)
+- Porta 8000: Tráfego para a API FastAPI.
+
+- Porta 3306: Acesso ao MariaDB (restrito via bind-address e permissões de usuário).
 
 ---
 
@@ -128,3 +79,10 @@ O ideal é utilizar variáveis de ambiente e senhas seguras.
 chmod +x scriptexe.sh
 ./scriptexe.sh
 ```
+
+## Como rodar
+1. Clone o repositório.
+2. Configure as variáveis de ambiente em um arquivo `.env` (conforme `.env.example`).
+3. Certifique-se de que o MariaDB está rodando (configurado via scriptexe.sh) e o banco api_escola foi criado.
+4. Execute `pip install -r requirements.txt`.
+5. Inicie com `python -m uvicorn app.main:app --reload`.
