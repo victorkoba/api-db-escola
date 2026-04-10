@@ -40,12 +40,12 @@ A API segue o padrão OpenAPI, gerando documentação automática que facilita o
 
 ---
 
-### Ambiente de Desenvolvimento
+## Ambiente de Desenvolvimento
 <img width="1920" height="962" alt="image" src="https://github.com/user-attachments/assets/293443b9-2374-4dfc-a7d5-890b8832716a" />
 
 ---
 
-### Configuração de rede
+## Configuração de rede
 
 No Security Group da instância, foram configuradas as regras de entrada:
 
@@ -76,8 +76,6 @@ As credenciais definidas no script (como senha do usuário root do banco) são a
 
 **Não utilize essas configurações em ambiente de produção.**
 O ideal é utilizar variáveis de ambiente e senhas seguras.
-
----
 
 ### Como executar:
 
