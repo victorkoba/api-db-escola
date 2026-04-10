@@ -38,8 +38,12 @@ A API segue o padrão OpenAPI, gerando documentação automática que facilita o
 ## Redoc
 <img width="1920" height="968" alt="image" src="https://github.com/user-attachments/assets/09f7d987-92a3-485c-b77d-d0a6109a9fbe" />
 
+---
+
 ### Ambiente de Desenvolvimento
 <img width="1920" height="962" alt="image" src="https://github.com/user-attachments/assets/293443b9-2374-4dfc-a7d5-890b8832716a" />
+
+---
 
 ### Configuração de rede
 
@@ -72,6 +76,8 @@ As credenciais definidas no script (como senha do usuário root do banco) são a
 
 **Não utilize essas configurações em ambiente de produção.**
 O ideal é utilizar variáveis de ambiente e senhas seguras.
+
+---
 
 ### Como executar:
 
